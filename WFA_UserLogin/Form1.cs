@@ -18,6 +18,11 @@ namespace WFA_UserLogin
             InitializeComponent();
         }
 
+        private void txtGirisAlani_Click(object sender, EventArgs e)
+        {
+            // test
+        }
+
 
         // Randon Nesnesi kullanarak rastgele sayı üretilecek!
     }
