@@ -70,7 +70,7 @@ namespace WFA_UserLogin
                     btnLogin.Enabled = false;
                     txtGirisAlani.Enabled = false;
                     lblRastgeleSayi.Text = "********";
-                    MessageBox.Show("Failed to login!");
+                    MessageBox.Show("Giriş Sağlanamadı!");
                     startAgain();
 
                 }
@@ -80,7 +80,7 @@ namespace WFA_UserLogin
                 txtGirisAlani.Text = "";
                 randomGenerator();
                 startAgain();
-                MessageBox.Show("Welcome :)");
+                MessageBox.Show("Hoşgeldiniz :)");
             }
         }
 
