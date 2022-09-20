@@ -64,6 +64,7 @@
             this.lblRastgeleSayi.Size = new System.Drawing.Size(404, 37);
             this.lblRastgeleSayi.TabIndex = 1;
             this.lblRastgeleSayi.Text = "* * * * * * * *";
+            this.lblRastgeleSayi.Click += new System.EventHandler(this.lblRastgeleSayi_Click);
             // 
             // txtGirisAlani
             // 
@@ -71,10 +72,10 @@
             // 
             // 
             this.txtGirisAlani.CustomButton.Image = null;
-            this.txtGirisAlani.CustomButton.Location = new System.Drawing.Point(872, 2);
-            this.txtGirisAlani.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGirisAlani.CustomButton.Location = new System.Drawing.Point(654, 2);
+            this.txtGirisAlani.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtGirisAlani.CustomButton.Name = "";
-            this.txtGirisAlani.CustomButton.Size = new System.Drawing.Size(52, 48);
+            this.txtGirisAlani.CustomButton.Size = new System.Drawing.Size(39, 39);
             this.txtGirisAlani.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtGirisAlani.CustomButton.TabIndex = 1;
             this.txtGirisAlani.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -83,7 +84,7 @@
             this.txtGirisAlani.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtGirisAlani.Lines = new string[0];
             this.txtGirisAlani.Location = new System.Drawing.Point(31, 162);
-            this.txtGirisAlani.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGirisAlani.Margin = new System.Windows.Forms.Padding(4);
             this.txtGirisAlani.MaxLength = 32767;
             this.txtGirisAlani.Name = "txtGirisAlani";
             this.txtGirisAlani.PasswordChar = '\0';
@@ -113,7 +114,7 @@
             // 
             this.star4.Image = global::WFA_UserLogin.Properties.Resources.icons8_star_30px_3;
             this.star4.Location = new System.Drawing.Point(397, 320);
-            this.star4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.star4.Margin = new System.Windows.Forms.Padding(4);
             this.star4.Name = "star4";
             this.star4.Size = new System.Drawing.Size(40, 37);
             this.star4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +125,7 @@
             // 
             this.star5.Image = global::WFA_UserLogin.Properties.Resources.icons8_star_30px_3;
             this.star5.Location = new System.Drawing.Point(445, 320);
-            this.star5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.star5.Margin = new System.Windows.Forms.Padding(4);
             this.star5.Name = "star5";
             this.star5.Size = new System.Drawing.Size(40, 37);
             this.star5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,7 +136,7 @@
             // 
             this.star3.Image = global::WFA_UserLogin.Properties.Resources.icons8_star_30px_3;
             this.star3.Location = new System.Drawing.Point(349, 320);
-            this.star3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.star3.Margin = new System.Windows.Forms.Padding(4);
             this.star3.Name = "star3";
             this.star3.Size = new System.Drawing.Size(40, 37);
             this.star3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,7 +147,7 @@
             // 
             this.star2.Image = global::WFA_UserLogin.Properties.Resources.icons8_star_30px_3;
             this.star2.Location = new System.Drawing.Point(301, 320);
-            this.star2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.star2.Margin = new System.Windows.Forms.Padding(4);
             this.star2.Name = "star2";
             this.star2.Size = new System.Drawing.Size(40, 37);
             this.star2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -157,7 +158,7 @@
             // 
             this.star1.Image = global::WFA_UserLogin.Properties.Resources.icons8_star_30px_3;
             this.star1.Location = new System.Drawing.Point(253, 320);
-            this.star1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.star1.Margin = new System.Windows.Forms.Padding(4);
             this.star1.Name = "star1";
             this.star1.Size = new System.Drawing.Size(40, 37);
             this.star1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,7 +169,7 @@
             // 
             this.btnLogin.ActiveControl = null;
             this.btnLogin.Location = new System.Drawing.Point(31, 214);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(696, 81);
             this.btnLogin.TabIndex = 3;
@@ -177,6 +178,7 @@
             this.btnLogin.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btnLogin.UseSelectable = true;
             this.btnLogin.UseTileImage = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Form1
             // 
@@ -193,10 +195,11 @@
             this.Controls.Add(this.txtGirisAlani);
             this.Controls.Add(this.lblRastgeleSayi);
             this.Controls.Add(this.metroLabel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Kullanıcı Giriş Ekranı";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.star4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.star5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.star3)).EndInit();
