@@ -37,18 +37,55 @@ namespace WFA_UserLogin
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(!(txtGirisAlani.Text == lblRastgeleSayi.Text))
+            if (!(txtGirisAlani.Text == lblRastgeleSayi.Text))
             {
-                txtGirisAlani.Text = "";
-                randomGenerator();
-                MessageBox.Show("Error");
-                return;
+                if(!(starCount == 1))
+                {
+                    starCount = starCount - 1;
+                    txtGirisAlani.Text = "";
+                    randomGenerator();
+                    
+                    if (starCount == 4)
+                        {
+                            star5.Visible = false;
+                        }
+                    else if(starCount == 3)
+                        {
+                            star4.Visible = false;
+                        }
+                    else if (starCount == 2)
+                        {
+                            star3.Visible = false;
+                        }
+                    else if(starCount == 1)
+                        {
+                            star2.Visible = false;
+                        }
+                    return;
+                }
+                else
+                {
+                    starCount = 5;
+                    btnLogin.Enabled = false;
+                    txtGirisAlani.Enabled = false;
+                    lblRastgeleSayi.Text = "********";
+                    MessageBox.Show("Failed to login!"); 
+                    if (starCount == 5)
+                    {
+                        star1.Visible = true;
+                        star2.Visible = true;
+                        star3.Visible = true;
+                        star4.Visible = true;
+                        star5.Visible = true;
+                    }
+
+                }
             }
             else
             {
-                //starCounter();
                 txtGirisAlani.Text = "";
                 randomGenerator();
+                
                 MessageBox.Show("Success");
             }
         }
@@ -62,17 +99,7 @@ namespace WFA_UserLogin
 
         public void starCounter()
         {
-            if(!(starCount == 1))
-            {
-                starCount = starCount - 1;
-            }
-            else
-            {
-                btnLogin.Enabled = false;
-                txtGirisAlani.Enabled = false;
-                lblRastgeleSayi.Text = "********";
-                MessageBox.Show("Game Error");
-            }
+            
         }
 
         // Randon Nesnesi kullanarak rastgele sayı üretilecek!
