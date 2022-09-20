@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,7 +23,7 @@ namespace WFA_UserLogin
 
         private void txtGirisAlani_Click(object sender, EventArgs e)
         {
-            // test
+            
         }
 
         private void lblRastgeleSayi_Click(object sender, EventArgs e)
@@ -44,40 +45,33 @@ namespace WFA_UserLogin
                     starCount = starCount - 1;
                     txtGirisAlani.Text = "";
                     randomGenerator();
-                    
-                    if (starCount == 4)
-                        {
+                    txtGirisAlani.Focus();
+                    switch (starCount)
+                    {
+                        case 4:
                             star5.Visible = false;
-                        }
-                    else if(starCount == 3)
-                        {
+                            break;
+                        case 3:
                             star4.Visible = false;
-                        }
-                    else if (starCount == 2)
-                        {
+                            break;
+                        case 2:
                             star3.Visible = false;
-                        }
-                    else if(starCount == 1)
-                        {
+                            break;
+                        case 1:
                             star2.Visible = false;
-                        }
+                            break;
+                        default:
+                            break;
+                    }
                     return;
                 }
                 else
                 {
-                    starCount = 5;
                     btnLogin.Enabled = false;
                     txtGirisAlani.Enabled = false;
                     lblRastgeleSayi.Text = "********";
-                    MessageBox.Show("Failed to login!"); 
-                    if (starCount == 5)
-                    {
-                        star1.Visible = true;
-                        star2.Visible = true;
-                        star3.Visible = true;
-                        star4.Visible = true;
-                        star5.Visible = true;
-                    }
+                    MessageBox.Show("Failed to login!");
+                    startAgain();
 
                 }
             }
@@ -85,8 +79,21 @@ namespace WFA_UserLogin
             {
                 txtGirisAlani.Text = "";
                 randomGenerator();
-                
-                MessageBox.Show("Success");
+                startAgain();
+                MessageBox.Show("Welcome :)");
+            }
+        }
+
+        public void startAgain()
+        {
+            starCount = 5;
+            if (starCount == 5)
+            {
+                star1.Visible = true;
+                star2.Visible = true;
+                star3.Visible = true;
+                star4.Visible = true;
+                star5.Visible = true;
             }
         }
 
@@ -95,11 +102,6 @@ namespace WFA_UserLogin
             Random random = new Random();
             int randomNo = random.Next(10000000, 99999999);
             lblRastgeleSayi.Text = randomNo.ToString();
-        }
-
-        public void starCounter()
-        {
-            
         }
 
         // Randon Nesnesi kullanarak rastgele sayı üretilecek!
